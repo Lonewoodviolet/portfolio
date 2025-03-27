@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ada's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Ada Kim</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Selected Works</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="projects-section">
+            <h1>Selected Works</h1>
+            <div class="tabs">
+                <button class="tab-button active" onclick="showProject('project1')">Qualitative</button>
+                <button class="tab-button" onclick="showProject('project2')">Quantitative</button>
+                <button class="tab-button" onclick="showProject('project3')">UX Strategy</button>
+                <button class="tab-button" onclick="showProject('project4')">Zero to One</button>
+            </div>
+            
+            <div class="tab-content">
+                <article class="project-card active" id="project1">
+                    <div class="project-content">
+                        <h2>Music Recommendations #1: Why People Don't Use Them</h2>
+                        
+                        <div class="content-wrapper">
+                            <div class="content-section">
+                                <h3>Summary</h3>
+                                <p>As a team of one, I owned a feature of a music streaming service and collaborated with ML data scientists to solve a problem. The problem was low streaming counts for personalized songs despite renovation of the recommendation system.<br><br>
+                                    I approached it qualitatively because we needed to understand "why" view counts weren't growing rather than just measuring them. Through heuristic evaluation, journey mapping, and usability testing, I identified that UI complexity was preventing users from discovering recommendations.<br><br>
+                                    My insights led to interface simplification and recognition that users preferred familiar music in certain contexts. Follow-up quantitative research implementing these findings resulted in a 6% increase in streaming counts.</p>
+                            </div>
+                            <div class="project-image">
+                                <img src="project_images/product_melon.png" alt="Mockup of the product" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+
+                        <hr class="section-divider">
+
+                        <div class="content-section">
+                            <h3>Key Insights</h3>
+                            <ul class="key-insights">
+                                <li><b>User experience is fragmented by expertise level:</b> Short-term users struggle with navigation and deplete cognitive resources before discovering recommendations, while long-term users create personal shortcuts that bypass new features entirely.</li>
+                                
+                                <li><b>Familiarity drives engagement more than novelty:</b> Users prefer recognizable songs in recommendation lists, challenging the team's assumption that diversity in recommendations is always preferable.</li>
+                                
+                                <li><b>Context significantly influences music selection behavior:</b> Users adopt more conservative selection strategies when choosing music for specific activities (like driving or jogging), gravitating toward familiar songs and avoiding exploration.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <button class="project-link" onclick="toggleProjectDetails('project1-details')">View Details</button>
+                        </div>
+                        <div class="project-details" id="project1-details">
+                            <h3>Detailed research process</h3>
+                            <div class="pdf-container">
+                                <embed src="project_pdfs/Music Recommendations_ Why People Don't Use Them.pdf" width="100%" height="800px">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" id="project2">
+                    <div class="project-content">
+                        <h2>Music Recommendations #2: How UX Research Improved KPIs</h2>
+                        
+                        <div class="content-wrapper">
+                            <div class="content-section">
+                                <h3>Summary</h3>
+                                <p>As a team of one, I owned a music streaming feature and collaborated with ML data scientists. The problem was twofold: proving how familiar songs affect user engagement and addressing data scientists' resistance to moving away from diversity as a solution for the "filter bubble".<br><br>
+                                    I took a quantitative approach and reframed the topic as testing whether increased recommendation diversity, not familiarity, would improve engagement to overcome data scientists' skepticism.<br><br>
+                                    Using A/B testing and log data analysis, I discovered increased diversity only attracted explorative users, not the majority, without significant changes in listening habits. Data scientists accepted my evidence-based suggestion to add a few familiar songs to playlist recommendations, resulting in a 6% increase in streaming counts, a key KPI.</p>
+                            </div>
+                            <div class="project-image">
+                                <img src="project_images/product_melon_2.png" alt="Recommendation feature of the mockup" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+
+                        <hr class="section-divider">
+
+                        <div class="content-section">
+                            <h3>Key Insights</h3>
+                            <ul class="key-insights">
+                                <li><b>User segmentation reveals distinct recommendation preferences:</b> Not all users respond the same way to diverse recommendations - explorative users showed higher click-through rates and page views with diverse playlists while most users preferred familiar content.</li>
+                                <li><b>Recommendation diversity functions primarily as an attraction mechanism:</b> Even when explorative users checked more with diverse recommendations, their actual streaming behaviors remained consistent, suggesting diversity attracts attention but doesn't significantly change listening habits.</li>
+                                <li><b>Familiarity and diversity serve different purposes at different stages:</b> Familiar songs may build initial trust in recommendations for new users ("they know what I like"), while continuing users may need more diversity to maintain interest and prevent recommendation fatigue.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <button class="project-link" onclick="toggleProjectDetails('project2-details')">View Details</button>
+                        </div>
+                        <div class="project-details" id="project2-details">
+                            <h3>Detailed research process</h3>
+                            <div class="pdf-container">
+                                <embed src="project_pdfs/Music Recommendations_ How UX research Improved KPIs.pdf" width="100%" height="800px">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" id="project3">
+                    <div class="project-content">
+                        <h2>Building Critical User Journeys for a Finance Product Roadmap</h2>
+                        
+                        <div class="content-wrapper">
+                            <div class="content-section">
+                                <h3>Summary</h3>
+                                <p>As a part of a taskforce team, I cross-functionally collaborated with diverse stakeholders including leadership to solve a problem. The problem was clarifying our mobile finance app's Critical User Journeys (CUJs) to inform the next year's roadmap.<br><br>
+                                    I approached it with a dynamic mixed-methods framework and incorporated both existing data and fresh user perspectives for fast-paced, efficient collaboration. From triangulating analyses of behavioral log data, user scenario reviews, and user interviews, I suggested possible user journeys and iterated them with stakeholders to finalize CUJs.<br><br>
+                                    The impact was successful integration into roadmap planning, company-wide recognition of CUJs' importance, and practical application in feature prioritization decisions.</p>
+                            </div>
+                            <div class="project-image">
+                                <img src="project_images/product_banksalad.png" alt="A mockup of the product" style="width: 100%; height: 100%; object-fit: cover;">
+
+                            </div>
+                        </div>
+
+                        <hr class="section-divider">
+
+                        <div class="content-section">
+                            <h3>Key Insights</h3>
+                            <ul class="key-insights">
+                                <li><b>Understanding user perspectives in diverse product lifecycles is critical:</b> As CUJs are accumulated traits of user behaviors over several years, it is highly important to listen to voices from both new and long-term users.</li>
+                                <li><b>Facilitating cross-functional collaboration is key to success:</b> Unlike single-topic studies, identifying product CUJs must require teamwork and communication across departments, guided by qualitative research and stakeholder feedback.</li>
+                                <li><b>Addressing internal stakeholder perspectives drives adoption:</b> As stakeholders' concerns and questions about CUJs were addressed, they became more supportive and actively referred to the outcome for the future planning.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <button class="project-link" onclick="toggleProjectDetails('project3-details')">View Details</button>
+                        </div>
+                        <div class="project-details" id="project3-details">
+                            <h3>Detailed research process</h3>
+                            <div class="pdf-container">
+                                <embed src="project_pdfs/Building Critical User Journeys for a Financing Product.pdf" width="100%" height="800px">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" id="project4">
+                    <div class="project-content">
+                        <h2>Foundational Research for Building a Data Product for AI</h2>
+                        
+                        <div class="content-wrapper">
+                            <div class="content-section">
+                                <h3>Summary</h3>
+                                <p>As a UX research lead in an early startup, I cross-functionally collaborated with technical stakeholders to develop a web product for diagnosing AI dataset quality. The challenge was creating a user-friendly MVP for a highly technical product with limited market benchmarks.<br><br>
+                                    Starting with a simple prototype, I employed a generative research approach using qualitative methods. First, I established stakeholders' consensus on UX by democratizing the research process. Then, I defined target user groups and critical product features with leadership. Through in-depth interviews and analysis, I developed comprehensive user scenarios that informed the product's design iterations and validated them with usability testing.<br><br>
+                                    This collaborative approach led to a successful product launch at CES 2024 and secured partnerships with major industry players, establishing clear UX strategies for future product plans.</p>
+                            </div>
+                            <div class="project-image">
+                                <img src="project_images/pb_diagnosis report_4.png" alt="AI Dataset Quality Diagnostic Report" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+
+                        <hr class="section-divider">
+
+                        <div class="content-section">
+                            <h3>Key Insights</h3>
+                            <ul class="key-insights">
+                                <li><b>The fundamentals of UX remain essential:</b> Even in the technical domain of data and AI, user-centered design principles are crucial for the product development process.</li>
+                                <li><b>Understanding users' level of data background is paramount:</b> Data literacy and skills vary across data experts depending on their backgrounds and levels, which requires a thoughtful targeting of the "main" user group.</li>
+                                <li><b>Ensuring trustworthiness through usability is critical for an AI product:</b> Potential customers may be concerned about trustworthiness of an AI-involved product and want to ensure it through product's usability.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <button class="project-link" onclick="toggleProjectDetails('project4-details')">View Details</button>
+                        </div>
+                        <div class="project-details" id="project4-details">
+                            <h3>Detailed research process</h3>
+                            <div class="pdf-container">
+                                <embed src="project_pdfs/Foundational research for building a data product for AI.pdf" width="100%" height="800px">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="other-footer">
+        <p>&copy; 2025 Ada Kim. AI-powered. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showProject(projectId) {
+            // Hide all project cards
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show the selected project card
+            document.getElementById(projectId).classList.add('active');
+
+            // Add active class to the corresponding tab button
+            const tabIndex = projectId.replace('project', '') - 1;
+            document.querySelectorAll('.tab-button')[tabIndex].classList.add('active');
+        }
+
+        // Handle URL hash on page load
+        window.addEventListener('load', function() {
+            const hash = window.location.hash;
+            if (hash) {
+                const projectId = hash.substring(1); // Remove the # symbol
+                showProject(projectId);
+            } else {
+                // If no hash, show the first project
+                showProject('project1');
+            }
+        });
+
+        function toggleProjectDetails(detailsId) {
+            const details = document.getElementById(detailsId);
+            details.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html> 
