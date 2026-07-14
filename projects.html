@@ -26,6 +26,7 @@
                 <button class="tab-button" onclick="showProject('project2')">Quantitative</button>
                 <button class="tab-button" onclick="showProject('project3')">UX Strategy</button>
                 <button class="tab-button" onclick="showProject('project4')">Zero to One</button>
+                <button class="tab-button" onclick="showProject('project5')">AI Product</button>
             </div>
             
             <div class="tab-content">
@@ -187,12 +188,51 @@
                         </div>
                     </div>
                 </article>
+
+                <article class="project-card" id="project5">
+                    <div class="project-content">
+                        <h2>Productizing an AI Data Product: A Report Pipeline</h2>
+
+                        <div class="content-wrapper">
+                            <div class="content-section">
+                                <h3>Summary</h3>
+                                <p>As a UX &amp; Product lead at Pebblous, I owned the productization of Data Clinic, a product that evaluates the quality of large, unstructured data for AI algorithms. The problem was that leadership wanted investor-ready evaluation reports within 2 months, but there was no pipeline or structure to produce them, and the process had stalled for a couple of months.<br><br>
+                                    I first diagnosed the real bottleneck through a 1:1 with the DS team lead: the issue was a lack of guideline and report framing, not the team's productivity. Taking ownership, I designed a modular report structure and built a report production pipeline on an existing collaboration tool to save engineering resources.<br><br>
+                                    By separating numerical values from reusable descriptive parts, the second report took 50% less time to produce. We delivered 3 sample reports by the middle of the second month, which leadership showcased to investors and potential customers, resulting in positive feedback, a business partnership, and a positive impact on the next investment round.</p>
+                            </div>
+                            <div class="project-image">
+                                <img src="project_images/pb_pipeline.png" alt="Sample evaluation report produced by the pipeline" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+
+                        <hr class="section-divider">
+
+                        <div class="content-section">
+                            <h3>Key Insights</h3>
+                            <ul class="key-insights">
+                                <li><b>The real bottleneck was structure, not productivity:</b> A 1:1 conversation revealed the DS team was blocked by the absence of a report guideline and a way to frame the ML engine's values, not by a lack of effort. Reframing the problem as a guideline gap unlocked the path forward.</li>
+                                <li><b>Modularization enables speed through reuse:</b> Separating numerical-value parts from written descriptive parts let the descriptive content be reused across reports. Once the first report was done, the second took 50% less time to produce.</li>
+                                <li><b>Resource constraints shaped the build decision:</b> Under a tight timeline and scarce resources, adopting an existing commercial collaboration tool instead of building an internal system saved engineering resources while still delivering an automatable pipeline for future scale-up.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <button class="project-link" onclick="toggleProjectDetails('project5-details')">View Details</button>
+                        </div>
+                        <div class="project-details" id="project5-details">
+                            <h3>Detailed process</h3>
+                            <div class="pdf-container">
+                                <embed src="project_pdfs/Productizing an AI Data Product_ A Report Pipeline.pdf" width="100%" height="800px">
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
 
     <footer class="other-footer">
-        <p>&copy; 2025 Ada Kim. AI-powered. All rights reserved.</p>
+        <p>&copy; 2026 Ada Kim. AI-powered. All rights reserved.</p>
     </footer>
 
     <script>
